@@ -1,0 +1,44 @@
+<!-- <div *ngFor="let category of productDetails.data.details">
+    <h2>
+      {{ category.mst_cat_name }}
+    </h2>
+    <ul>
+      <li *ngFor="let product of category.product_details">
+        {{ product.mst_product_name }}<br>
+        <input type="checkbox" [(ngModel)]="product.isCheckboxCheck" />
+        <label for="isRequired">Required</label>
+      </li>
+    </ul>
+  </div>
+  <button>Show Selected Products</button>-->
+
+
+<div *ngFor="let category of productDetails.data.details">
+  <h2>
+    {{ category.mst_cat_name }}
+  </h2>
+  <ul>
+    <li *ngFor="let product of category.product_details">
+      {{ product.mst_product_name }}<br>
+      <input type="checkbox" [(ngModel)]="product.isCheckboxCheck" />
+      <label for="isRequired">Required</label>
+    </li>
+  </ul>
+</div>
+<button (click)="showSelectedProducts()">Show Selected Products</button>
+
+
+
+
+
+
+<br>
+<br>
+<div *ngIf="selectedProducts.length > 0">
+  <h3>Selected Products:</h3>
+  <ul>
+    <li *ngFor="let selectedProduct of selectedProducts">
+      {{ selectedProduct.category }} - {{ selectedProduct.product }}
+    </li>
+  </ul>
+</div>

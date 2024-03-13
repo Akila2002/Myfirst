@@ -1,0 +1,33 @@
+<h3>Template normal form</h3>
+<div class="container" style=background-color:lightgreen >
+<form #aki="ngForm" (ngSubmit)="onSubmit(aki)">
+ 
+    <p>
+      <label for="firstname">First Name:</label>
+      <input type="text" name="firstname" ngModel>
+    </p>
+   
+    <p>
+      <label for="lastname">Last Name:</label>
+      <input type="text" name="lastname" ngModel>
+    </p>
+    <p>
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="email" ngModel>
+    </p>
+   
+    <p>
+      <label for="gender">Geneder:</label>
+      <input type="radio" value="male" name="gender" ngModel> Male
+      <input type="radio" value="female" name="gender" ngModel> Female
+    </p>
+    
+    <p>
+      <button type="button" class="btn btn-success">Submit</button>
+    </p>
+    
+  </form>
+</div>
+ 
+ 
+  

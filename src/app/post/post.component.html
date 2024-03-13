@@ -1,0 +1,29 @@
+
+<h3>post method</h3>
+    <form [formGroup]="contactForm" (ngSubmit)="postData(this.contactForm.value)" novalidate>
+    
+    <p>
+        <label for="firstname">firstname</label>
+        <input type="text" id="firstname" name="firstname" formControlName="firstname">
+    </p>
+
+    <div *ngIf="contactForm.get('firstname')?. invalid && (contactForm.get('firstname')?.dirty || contactForm?.get('firstname')?.touched)">
+        <div [hidden]="!contactForm.get('firstname')?. hasError('required')"></div>
+    </div>
+
+    <p>
+        <label for="lastname">lastname</label>
+        <input type="text" id="lastname" name="lastname" formControlName="lastname">
+      </p>
+
+    <div *ngIf="contactForm.get('lastname')?. invalid && (contactForm.get('lastname')?.dirty || contactForm?.get('lastname')?.touched)">
+        <div [hidden]="!contactForm.get('lastname')?. hasError('required')"></div>
+    </div>
+
+    <p>
+        <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+     </p>
+     
+   
+
+</form>

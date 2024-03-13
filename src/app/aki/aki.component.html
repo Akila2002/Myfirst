@@ -1,0 +1,30 @@
+<h3>Register Form</h3>
+<div class="container" style=background-color:lightgreen>
+<form [formGroup]="akila" novalidate>
+    
+    <p>
+        <label for="name">name</label>
+        <input type="text"  name="name" formControlName="name">
+    </p>
+    <p>
+        <label for="password">password</label>
+        <input type="text"  name="password" formControlName="password">
+    </p>
+    <p>
+        <label for="email">email</label>
+        <input type="text"  name="email" formControlName="email">
+    </p>
+    <p>
+        <label for="phone">phone</label>
+        <input type="text"  name="phone" formControlName="phone">
+    </p>
+    <p>
+        <label for="state">state</label>
+        <input type="text"  name="state" formControlName="state">
+    </p>
+
+    <p>
+        <button type="submit"(click)="postData(this.akila.value)" [disabled]="!akila.valid">Register</button>
+     </p>
+</form> 
+</div>

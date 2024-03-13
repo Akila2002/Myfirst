@@ -1,0 +1,21 @@
+<br>
+<form [formGroup]="pooja1" (ngSubmit)="onSubmit()">
+  <label>Product ID:</label>
+  <input type="number" id="product_id" formControlName="product_id" required><br><br>
+
+  <label>Branch ID:</label>
+  <input type="number" id="branchId" formControlName="branch_id" required><br><br>
+
+  <input type="checkbox" id="isForRepeatSetCombo">
+  <label for="isForRepeatSetCombo">Is for Repeat Set Combo</label><br><br>
+
+
+  <button> <!--<a routerLink="/product-details">-->Submit</button>
+</form>
+
+<div>
+  <div *ngIf="productDetails">
+    <pre>{{ productDetails | json }}</pre>
+  </div>
+
+</div>
